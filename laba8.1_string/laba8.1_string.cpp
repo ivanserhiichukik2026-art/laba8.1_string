@@ -5,9 +5,9 @@ using namespace std;
 
 int Count(const string s, char c) // кількість символів c у рядку
 {
-    int    k = 0;
-    size_t pos = 0;
-    while ((pos = s.find(c, pos)) != -1)
+    int k = 0;
+    size_t pos = 0; // size_t - ціле число без знака
+    while ((pos = s.find(c, pos)) != -1) // шукаєм с в рядку s перевіряючи чи шось знайшли
     {
         pos++;
         k++;
@@ -19,9 +19,9 @@ int Count(const string s, char c) // кількість символів c у р
 string Change(string& s) // заміна кожного слова "BASIC" на "Delphi"
 {
     size_t pos = 0;
-    while ((pos = s.find("BASIC", pos)) != -1)
+    while ((pos = s.find("BASIC", pos)) != -1) // шукаєм слово в рядку s перевіряючи чи шось знайшли
     {
-        s.replace(pos, 5, "Delphi");
+        s.replace(pos, 5, "Delphi"); // заміна
         pos += 6;
     }
 
